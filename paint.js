@@ -13,11 +13,11 @@ function init()
     canvas = document.getElementById("myCanvas");
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
+    canvas.style.width = document.body.clientWidth;
+    canvas.style.height = document.body.clientHeight;
     context = canvas.getContext("2d");
     screenWidth = canvas.width;
     screenHeight = canvas.height;
-
-
 
     context.font = "48px Roboto";
     context.textAlign = "center";
@@ -47,5 +47,5 @@ function getCursorPosition(canvas, event) {
 }
 
 
-//driver code 
+//driver code
 init(); //idk
