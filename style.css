@@ -1,100 +1,85 @@
-html, body {
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: Roboto, arial, sans-serif;
+  margin: 10px;
+  overflow-x:hidden;
+}
+
+
+.firstname {
+  margin: 10px;
+  position: relative;
+  /*width: 882px;
+  height: 169px;*/
+  left: 40px;
+  top: 79px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 150px;
+  /*line-height: 234px;*/
+}
+
+.side {
+  margin: 10px;
+  position: relative;
+  /*width: 362px;
+  height: 180px;*/
+  left: 280px;
+  /*top: 270px;*/
+
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Helvetica', sans-serif;
-  }
-
-.name {
-    font-family: 'Helvetica', sans-serif;
-    margin-bottom: 2px;
 }
 
-.wrapper {
-  /*background-color: lightpink;*/
+.lastname {
+  margin: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 150px;
+  /*line-height: 234px;*/
+}
 
-  max-width: 50%;
+.bio {
+  margin: 10px;
+  position: relative;
+  width: 50%;
+  /*height: 309px;*/
+  left: 20px;
+  top: 40px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  /*line-height: 42px;*/
+}
+
+.links {
+  position: relative;
+  top: 80px;
   display: flex;
-  flex-direction: row;
-  height: 80%;
+  justify-content: space-around;
 }
 
-.left, .right {
-  /*background-color: lightblue;*/
-
-  margin: 5px;
-  max-width: 50%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.left {
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-picture {
-  border-radius: 50%;
-}
-
-.social-links {
-  list-style: none;
-  padding-left: 0px;
-  font-size: 18px;
-}
-
-.social-links li {
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.social-links a {
+.links a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  color: #000;
   text-decoration: none;
-  padding: 4px;
 }
 
-.social-links a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.links a:link{
+  color: #000;
 }
 
-.Opening {
-    justify-content: center;
+.links a:hover{
+  color: #00aeff;
 }
 
-.Title {
-    position: sticky;
-    top: auto;
-}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-.project {
-    font-family: 'Helvetica', sans-serif;
-    top: auto;
-}
-
-.project:hover {
-    /* so when it hovers a bunch of crap should show
-    up but all other other stuff should go away*/
-
-}
-
-.project:hover::after {
-    /* this is the image/text formatting*/
+.links a:visited{
+  color: #000;
 }

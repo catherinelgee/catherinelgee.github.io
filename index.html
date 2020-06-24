@@ -1,36 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Catherine Gee</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
   </head>
-
   <body>
-  <div class="wrapper">
-
-    <div class="left">
-      <img class="profile-picture" src="img/pic_me.JPG" width="200"/>
-      <h1 class="name">Catherine Gee</h1>
-      <h4 class="subtitle">Sophomore @ UC Berkeley</h4>
-    </div>
-
-    <div class="right">
+    <h1 class="firstname">Catherine</h1>
+    <div class="side">
+      <h1 class="lastname">Gee</h1>
       <p class="bio">
-        Hi there! I'm Catherine and I study data science and computer science at UC Berkeley!
+        Hi there! I'm Catherine and I study data science and computer science at UC Berkeley.
         When I'm not trying to build this website I usually like to make games,
-        create data visualizations, or play Tetris.
-        You can check out the projects tab for a overview of what I am working on, or my
-        Github to check out the relevant code for said projects.
+        create data visualizations, or play Tetris. All of which you can learn more about in this site.
       </p>
-      <ul class="social-links">
-        <li><a href="https://catherinelgee.github.io/projects.html">Projects</a></<li>
-        <li><a href="https://github.com/catherinelgee">Github</a></li>
-        <li><a href="other/resume.pdf#page=1">Resume</a></li>
-        <li><a href="https://catherinelgee.github.io/more.html">More</a></li>
-      </ul>
     </div>
 
-  </div>
-</body>
+    <div class="links">
+      <a href="/projects.html">projects</a>
+      <a href="/resume.pdf">resume</a>
+      <a href="https://github.com/catherinelgee">github</a>
+      <a href="/more.html">more</a>
+    </div>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
 </html>
