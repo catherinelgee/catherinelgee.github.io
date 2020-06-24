@@ -72,7 +72,7 @@ body {
 .links a {
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 48px;
   color: #000;
   text-decoration: none;
 }
@@ -81,13 +81,14 @@ body {
   color: #000;
 }
 
-.links a:hover{
+.links a:hover, .links a:visited:hover{
   color: #00aeff;
 }
 
 .links a:visited{
   color: #000;
 }
+
 
 /*PROJECTS*/
 
@@ -125,4 +126,9 @@ body {
   margin: 10px;
   margin-top: 30px;
   font-size: 30px;
+}
+
+/*MORE*/
+.more-container h1, p{
+    text-align: center;
 }
