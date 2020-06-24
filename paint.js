@@ -45,3 +45,7 @@ function getCursorPosition(canvas, event) {
     mouseX = event.clientX - rect.left
     mouseY = event.clientY - rect.top
 }
+
+
+//driver code 
+init(); //idk
