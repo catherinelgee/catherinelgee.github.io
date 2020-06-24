@@ -35,7 +35,7 @@ function run() {
         canvas.addEventListener('mousedown', function(e) {
             getCursorPosition(canvas, e)
         });
-        canvas.fillRect(mouseX, mouseY, 1, 1);
+        context.fillRect(mouseX, mouseY, 1, 1);
     }
 
 }
