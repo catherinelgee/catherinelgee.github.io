@@ -54,5 +54,9 @@ function getCursorPosition(canvas, event) {
   }
 }
 
-//driver code
-init(); //idk
+//driver
+var f = new FontFace("Roboto", "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+  f.load().then(function() {
+    // Ready to use the font in a canvas context
+    init();
+});
