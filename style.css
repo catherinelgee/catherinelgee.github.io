@@ -1,8 +1,13 @@
 /* CSS files add styling rules to your content */
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   font-family: Roboto, arial, sans-serif;
-  margin: 10px;
+  margin: 0px;
   overflow-x:hidden;
 }
 
@@ -82,4 +87,42 @@ body {
 
 .links a:visited{
   color: #000;
+}
+
+/*PROJECTS*/
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.proj-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-container h2 {
+  margin: 40px;
+  font-size: 48px;
+}
+
+.howto-container {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  background: #C4C4C4;
+  max-width: 30%;
+}
+
+.howto-container h2 {
+  margin: 10px;
+  margin-left: 50%;
+  font-size: 48px;
+}
+
+.howto-container h3 {
+  margin: 10px;
+  margin-top: 30px;
+  font-size: 30px;
 }
