@@ -2,5 +2,5 @@ html, body {
     font-family: Roboto, sans-serif;
     height: 100%;
     margin: 0px;
-    cursor: url("other/pencil.png"), auto;
+    cursor: url("/other/pencil.png"), auto;
 }

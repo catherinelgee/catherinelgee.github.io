@@ -1,14 +1,17 @@
+//////////////////////////////
+// GLOBAL VARIABLES
+/////////////////////////////
+
 var screenWidth;
 var screenHeight;
 
 var canvas;
 var context;
 var mouse;
-//var prevX; var prevY;
 var mouseX;
 var mouseY;
 var down = false;
-//var fresh = true;
+
 const colors = [
   { x: 10, y: 10, width: 20, color: '#de0434'},
   { x: 40, y: 10, width: 20, color: '#f2b007'},
@@ -21,39 +24,9 @@ const colors = [
   { x: 250, y: 10, width: 20, color: "#fff"},
 ];
 
-
-var bbox = {x:10,y:10, w:100, h:100};
-
-function drawBase(canvas, context) {
-  context.font = "48px Roboto";
-  context.textAlign = "center";
-  context.fillText("PAINT THE SITE", screenWidth / 2, screenHeight / 2 - 30);
-
-  context.font = "36px Roboto";
-  context.textAlign = "center";
-  context.fillText(
-    "paint: click/drag; clear: crtl+alt+n",
-    screenWidth / 2,
-    screenHeight / 2
-  );
-
-  colors.forEach(c => {
-    context.beginPath();
-    context.rect(c.x, c.y, c.width, c.width);
-    context.fillStyle = c.color;
-    context.fill();
-    context.strokeStyle = "#000";
-    context.stroke();
-  })
-  }
-
-/*function helperSquares(x, y, color, ctx) {
-  ctx.beginPath();
-  ctx.rect(x, y, 20, 20);
-  ctx.fillStyle = color;
-  ctx.fill();
-  ctx.stroke();
-}*/
+//////////////////////////////
+// SETUP FUNCTIONS
+/////////////////////////////
 
 function init() {
   canvas = document.getElementById("myCanvas");
@@ -87,9 +60,35 @@ function run() {
   canvas.addEventListener("click", menuCheck);
 }
 
+//////////////////////////////
+// HELPER FUNCTIONS
+/////////////////////////////
+
+function drawBase(canvas, context) {
+  context.font = "48px Roboto";
+  context.textAlign = "center";
+  context.fillText("PAINT THE SITE", screenWidth / 2, screenHeight / 2 - 30);
+
+  context.font = "36px Roboto";
+  context.textAlign = "center";
+  context.fillText(
+    "paint: click/drag; clear: crtl+alt+n",
+    screenWidth / 2,
+    screenHeight / 2
+  );
+
+  colors.forEach(c => {
+    context.beginPath();
+    context.rect(c.x, c.y, c.width, c.width);
+    context.fillStyle = c.color;
+    context.fill();
+    context.strokeStyle = "#000";
+    context.stroke();
+  })
+}
+
 function isIntersect(point, c) {
   return point.x > c.x && point.x < (c.x + c.width) && point.y > c.y && point.y < (c.y + c.width);
-  //return Math.sqrt((point.x-c.x) ** 2 + (point.y - c.y) ** 2) < c.width;
 }
 
 function menuCheck(event) {
@@ -103,7 +102,6 @@ function menuCheck(event) {
       context.strokeStyle = c.color;
     }
   });
-
 }
 
 function isDown(event) {
@@ -112,7 +110,7 @@ function isDown(event) {
   }
 }
 
-//ITERATION 1
+//ITERATION 1 (might incorporate this as a stipling thing)
 function getCursorPosition(canvas, event) {
   if (down) {
     const rect = canvas.getBoundingClientRect();
@@ -122,28 +120,6 @@ function getCursorPosition(canvas, event) {
   }
 }
 
-//ITERATION 2
-/*function drawLines(canvas, event) {
-  if (down) {
-    const rect = canvas.getBoundingClientRect();
-    mouseX = event.clientX - rect.left;
-    mouseY = event.clientY - rect.top;
-
-    if (fresh) {
-      prevX = mouseX;
-      prevY = mouseY;
-    }
-
-    context.beginPath();
-    context.moveTo(prevX, prevY);
-    context.lineTo(mouseX, mouseY);
-    context.stroke();
-
-    prevX = mouseX;
-    prevY = mouseY;
-  }
-}*/
-
 //ITERATION 3
 function draw(e){
   if(!down) return;
@@ -151,14 +127,16 @@ function draw(e){
   context.stroke();
 }
 
-
 function clearCanvas(canvas, event) {
   console.log("something is clicked");
   if(event.code == "KeyN" && event.altKey && event.ctrlKey) { //does it work like this??
-
     context.clearRect(0, 0, canvas.width, canvas.height);
     drawBase(canvas, context);
     }
 }
+
+//////////////////////////////
+// RUN ALL
+/////////////////////////////
 
 init();
