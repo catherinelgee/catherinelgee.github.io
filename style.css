@@ -77,15 +77,15 @@ a.links {
   text-decoration: none;
 }
 
-.links a:link{
+a:link.links {
   color: #000;
 }
 
-.links a:hover, .links a:visited:hover{
+a:hover.links , a:visited:hover.links{
   color: #00aeff;
 }
 
-.links a:visited{
+a:visited.links {
   color: #000;
 }
 
