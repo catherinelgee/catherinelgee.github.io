@@ -64,7 +64,7 @@ body {
 
 .links {
   position: relative;
-  top: 80px;
+  top: 70px;
   display: flex;
   justify-content: space-around;
 }
@@ -103,7 +103,7 @@ a:visited {
   flex-direction: column;
 }
 
-h2.proj-container {
+h2.proj {
   margin: 40px;
   font-size: 48px;
 }
@@ -116,19 +116,19 @@ h2.proj-container {
   max-width: 30%;
 }
 
-h2.howto-container {
+h2.howto {
   margin: 10px;
   margin-left: 50%;
   font-size: 48px;
 }
 
-h3.howto-container {
+h3.howto {
   margin: 10px;
   margin-top: 30px;
   font-size: 30px;
 }
 
 /*MORE*/
-h1.more-container, p.more-container{
+h1.more, p.more-container{
     text-align: center;
 }
