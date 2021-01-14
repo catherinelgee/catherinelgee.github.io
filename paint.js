@@ -7,7 +7,6 @@ var screenHeight;
 
 var canvas;
 var context;
-var mouse;
 var mouseX;
 var mouseY;
 var down = false;
