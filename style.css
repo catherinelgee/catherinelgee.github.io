@@ -1,80 +1,103 @@
 /* CSS files add styling rules to your content */
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
 
 body {
   height: 100%;
-  font-family: Roboto, arial, sans-serif;
+  font-family: "Courier New", Courier, monospace;
+  color: #000;
+  background: #fff;
   margin: 0px;
-  overflow-x:hidden;
+  overflow-x: hidden;
+  padding: clamp(1rem, 4vw, 3rem);
+  border: 6px solid #000;
 }
 
 
 .firstname {
-  margin: 10px;
-  position: relative;
-  /*width: 882px;
-  height: 169px;*/
-  left: 40px;
-  top: 79px;
+  margin: 10px 10px 10px 0;
 
-  font-family: Roboto;
+  font-family: inherit;
   font-style: normal;
   font-weight: bold;
-  font-size: 150px;
-  /*line-height: 234px;*/
+  font-size: clamp(2.5rem, 12vw, 9.375rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
 }
 
 .side {
   margin: 10px;
-  position: relative;
-  /*width: 362px;
-  height: 180px;*/
-  left: 280px;
-  /*top: 270px;*/
-
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  border-top: 6px solid #000;
+  padding-top: 1rem;
 }
 
 .lastname {
   margin: 20px;
-  font-family: Roboto;
+  font-family: inherit;
   font-style: normal;
   font-weight: normal;
-  font-size: 150px;
-  /*line-height: 234px;*/
+  font-size: clamp(2.5rem, 12vw, 9.375rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
 }
 
 .bio {
   margin: 10px;
-  position: relative;
-  width: 50%;
-  /*height: 309px;*/
-  left: 20px;
-  top: 40px;
+  flex: 1 1 20rem;
+  max-width: 40rem;
 
-  font-family: Roboto;
+  font-family: inherit;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  /*line-height: 42px;*/
+  font-size: clamp(1.1rem, 2.2vw, 1.875rem);
+  line-height: 1.3;
 }
 
 .links {
-  position: relative;
-  top: 70px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  margin-top: clamp(1.5rem, 5vw, 4.5rem);
+  border-top: 6px solid #000;
+  padding-top: clamp(1rem, 3vw, 2rem);
+}
+
+a.links,
+h2.proj {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  flex-grow: 1;
+  will-change: transform;
 }
 
 a.links {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
-  color: #000;
-  text-decoration: none;
+  font-size: clamp(1.25rem, 4vw, 3rem);
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+a.links:hover {
+  color: #fff;
+  background: #000;
+  transform: scale(2.5);
+  flex-grow: 3;
+  z-index: 1;
 }
 
 a:link {
@@ -82,20 +105,30 @@ a:link {
 }
 
 a:hover , a:visited:hover{
-  color: #00aeff;
+  color: #fff;
+  background: #000;
 }
 
 a:visited {
   color: #000;
 }
 
+@media (max-width: 30em) {
+  .links {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 
 /*PROJECTS*/
 
 .wrapper {
-  height: 100%;
+  min-height: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: clamp(1rem, 4vw, 3rem);
 }
 
 .proj-container {
@@ -105,7 +138,17 @@ a:visited {
 
 h2.proj {
   margin: 40px;
-  font-size: 48px;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  border-bottom: 4px solid #000;
+  display: inline-block;
+  transform-origin: left center;
+}
+
+h2.proj:hover {
+  color: #fff;
+  background: #000;
+  transform: scale(1.4);
+  z-index: 1;
 }
 
 .howto-container {
@@ -113,19 +156,25 @@ h2.proj {
   flex-direction: column;
   text-align: right;
   background: #C4C4C4;
-  max-width: 30%;
+  border: 6px solid #000;
+  flex: 1 1 16rem;
+  max-width: 30rem;
+  padding: 1rem;
 }
 
 h2.howto {
   margin: 10px;
-  margin-left: 50%;
-  font-size: 48px;
+  font-family: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
 h3.howto {
   margin: 10px;
   margin-top: 30px;
-  font-size: 30px;
+  font-family: inherit;
+  font-size: clamp(1rem, 2.5vw, 1.875rem);
 }
 
 /*MORE*/
